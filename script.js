@@ -7,7 +7,6 @@ function updateCountdown() {
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    // Sudah waktunya
     document.getElementById("countdown").textContent = "Asikkk kamu udah ulang tahun🎉";
   } else {
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -27,7 +26,7 @@ function showMainContent() {
   document.body.style.backgroundImage = "none";
 }
 
-// Event saat tombol diklik
+// Event tombol lanjut
 document.getElementById("continue-button").addEventListener("click", function () {
   const now = new Date();
   const message = document.getElementById("wait-message");
@@ -35,17 +34,17 @@ document.getElementById("continue-button").addEventListener("click", function ()
   if (now >= targetDate) {
     showMainContent();
   } else {
-    message.style.display = "block"; // Tampilkan pesan peringatan
+    message.style.display = "block";
   }
 });
 
-// Jalankan countdown saat halaman dibuka
+// Jalankan countdown
 window.onload = function () {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 };
 
-// Fungsi untuk modal gambar
+// Modal gambar
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-image");
 const captionText = document.getElementById("image-caption");
@@ -62,11 +61,25 @@ document.querySelectorAll(".gallery img").forEach(img => {
 closeBtn.onclick = function () {
   modal.style.display = "none";
 };
-
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
 
+// Gift
+const giftImg = document.getElementById("gift");
+const popupGift = document.getElementById("popup");
 
+giftImg.addEventListener("click", () => {
+  giftImg.src = "gift2.gif"; // ganti gif terbuka
+
+  setTimeout(() => {
+    popupGift.style.display = "flex";
+  }, 1500); // 1.5 detik menunggu animasi
+});
+
+function closePopup() {
+  popupGift.style.display = "none";
+  giftImg.src = "gift1.gif"; // kembali ke gif awal
+}
