@@ -33,13 +33,20 @@ body {
 }
 
 #gallery-section {
-  background-image: url('Gambar3.jpg'); /* Boleh pakai gambar lain */
+  background-image: url('Gambar3.jpg');
   background-size: cover;
-  background-position: center 40%; /* geser gambar sedikit ke bawah */
+  background-position: center 40%;
+}
+
+/* Background khusus untuk section kado */
+#gift-section {
+  background-image: url('Gambar4.jpg'); /* Ganti dengan gambar sendiri */
+  background-size: cover;
+  background-position: center;
 }
 
 .overlay {
-  background-color: rgba(255, 182, 193, 0.7); /* Pink transparan */
+  background-color: rgba(255, 182, 193, 0.7);
   padding: 40px;
   border-radius: 12px;
   max-width: 800px;
@@ -140,3 +147,42 @@ button:hover:enabled {
   color: #ff69b4;
 }
 
+/* Gift Image */
+.gift-img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gift-img:hover {
+  transform: scale(1.05);
+}
+
+/* Popup gift */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+.popup button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
