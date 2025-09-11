@@ -1,5 +1,5 @@
 // Tanggal target
-const targetDate = new Date("2025-09-10T00:00:00");
+const targetDate = new Date("2025-09-17T00:00:00");
 
 // Fungsi countdown
 function updateCountdown() {
@@ -68,4 +68,5 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
 
