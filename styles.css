@@ -186,3 +186,43 @@ button:hover:enabled {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* Ending Section */
+#ending-section {
+  background-color: #000; /* full hitam */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ending-section .ending-box {
+  background: rgba(128, 128, 128, 0.5); /* abu abu transparan */
+  padding: 30px 40px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+}
+
+#ending-section h2,
+#ending-section ul,
+#ending-section ul li {
+  color: #fff; /* semua teks putih */
+  margin: 10px 0;
+}
+
+#ending-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#ending-section ul a {
+  color: #00aaff; /* link biru */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#ending-section ul a:hover {
+  text-decoration: underline;
+}
